@@ -16,3 +16,21 @@ mixin InputRadio(name, label)
 mixin BtnMenu()
     button.btn__menu
         span
+
+mixin Malfunction(imgPath, title, price)
+    .malfunction-card 
+        .image(style=`background-image:url(${imgPath})`)
+        h3= title 
+        p= price 
+        a.btn обратиться
+
+mixin EconomyCard(imgPath, text)
+    .economy-card 
+        img(src= imgPath, alt="")
+        p= text
+
+mixin MastersCard(imgPath, name, post)
+    .master-card 
+        img(src= imgPath, alt="")
+        h3= name 
+        p= post

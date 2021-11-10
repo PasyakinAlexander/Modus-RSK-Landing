@@ -4,6 +4,32 @@
     {
         max-width: 1024px;
     }
+
+    .reviews{
+        .container{
+            .content{
+                .revs{
+                    img{
+                        width: 90%;
+                    }
+                }
+            }
+        }
+    }
+
+    .director{
+        .container{
+            .director-card{
+                width: 50%;
+            }
+
+            .descr{
+                .social{
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
 }
 
 @media(max-width: 1024px)
@@ -20,6 +46,40 @@
     {
         max-width: 768px;
     }
+
+    .reviews{
+        .container{
+            .content{
+                .videos{
+                    .video{
+                        width: 400px;
+                    }
+                }
+            }
+        }
+    }
+
+    .director{
+        height: auto;
+
+        .container{
+            flex-direction: column;
+            align-items: center;
+
+            .director-card{
+                margin-top: 50px;
+            }
+
+            .descr{
+                width: 100%;
+                margin-top: 50px;
+
+                .social{
+                    bottom: 50px;
+                }
+            }
+        }
+    }
 }
 
 @media(max-width: 768px)
@@ -28,12 +88,152 @@
     {
         max-width: 576px;
     }
+
+    .reviews{
+        .container{
+            h2{
+                text-align: center;
+            }
+
+            .content{
+                flex-direction: column;
+
+                .revs{
+                    width: 100%;
+                }
+
+                .videos{
+                    width: 100%;
+                    margin-top: 50px;
+
+                    .video{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .recommendations{
+        .container{
+            flex-direction: column;
+
+            .descr, .carousel{
+                width: 100%;
+            }
+
+            .carousel{
+                .carousel-recommendations{
+                    .carousel-item{
+                        img{
+                            height: auto;
+                            width: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .director{
+        padding-bottom: 50px;
+    }
 }
 
 @media(max-width: 576px)
 {
     .container
     {
-        max-width: 320px;
+        max-width: 100%;
+    }
+
+    .reviews{
+        .container{
+            h2{
+                font-size: 40px;
+            }
+
+            h3{
+                margin-top: 20px;
+                text-align: center;
+            }
+        }
+    }
+
+    .recommendations{
+        .container{
+            .descr{
+                h2{
+                    font-size: 40px;
+                }
+            }
+
+            .carousel{
+                .carousel-recommendations{
+                    .carousel-item{
+                        img{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .director{
+        padding-bottom: 50px;
+
+        .container{
+            .director-card{
+                height: 400px;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                width: 300px;
+
+                .name{
+                    margin-bottom: -5px;
+                }
+
+                .post{
+                    margin-bottom: -5px;
+                }
+            }
+
+            .descr{
+                padding: 0;
+
+                h2{
+                    text-align: center;
+                }
+
+                h3{
+                    margin-top: 20px;
+                    font-size: 24px;
+                    text-align: center;
+                }
+
+                .contacts{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    .mail{
+                        margin-top: 20px;
+                        margin-left: 0;
+                    }
+                }
+
+                .social{
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+
+                    p{
+                        width: 100%;
+                        text-align: center;
+                    }
+                }
+            }
+        }
     }
 }

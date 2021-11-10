@@ -9,11 +9,173 @@ html(lang="ru")
         title Document
         include pug/head.pug
     body
-        .container
-            h1 Hi from PUG! 
-            +InputRadio('name', 'test')
-            
-            +Modal('test', 'ModalTemplate')
-            button(modal="test") Modal Test
-
+        header 
+            .container 
+                a(href="#") 
+                    img.logo(src="../assets/images/logo.png", alt="")
+                .contacts 
+                    .social 
+                        a(href="")
+                            img(src="../assets/images/icons/social/facebook.png", alt="") 
+                        a(href="")
+                            img(src="../assets/images/icons/social/instagram.png", alt="") 
+                        a(href="")
+                            img(src="../assets/images/icons/social/vkontakte.png", alt="") 
+                    .btns 
+                        a(href="mailto:info@rsk-modus.ru").btn.btn-mail info@rsk-modus.ru
+                        a.btn.btn-call-back Обратный звонок
+                        a(href="tel:84951911267").phone 8 (495) 191-12-67
+            .nav
+                .container
+                    ul 
+                        li
+                            a(href="") Услуги
+                        li
+                            a(href="") Как сэкономить?
+                        li
+                            a(href="") Наши мастера
+                        li
+                            a(href="") Наши гарантии
+                        li
+                            a(href="") Контакты
+        section.top 
+            .container
+                .text 
+                    h1 Ремонт пластиковых окон в Москве 
+                        span от 499 р.
+                    p Ремонт окон, подоконников, откосов, уплотнителей, регулировка фурнитуры
+                    a.btn.btn-price узнать стоимость со скидкой 30%
+                .kp 
+                    .kp-block.location Мастера в каждом районе Москвы
+                    .kp-block.van Выезд и диагностика бесплатно!
+                    .kp-block.like Работаем без предоплаты
+                    .kp-block.percentage Юр.лицам возвращаем НДС
+        section.malfunctions 
+            .container 
+                h2 Выберите неисправность:
+                .malfunctions-cards 
+                    +Malfunction("../assets/images/malfunctions/does-not-close.png", "Окно не закрывается", "от 499 р.")
+                    +Malfunction("../assets/images/malfunctions/blows.png", "Окно продувает", "от 499 р.")
+                    +Malfunction("../assets/images/malfunctions/fogging.png", "Окно запотевает", "от 499 р.")
+                    +Malfunction("../assets/images/malfunctions/broken.png", "Окно разбито", "от 499 р.")
+                    +Malfunction("../assets/images/malfunctions/skew.png", "Окна перекошены", "от 499 р.")
+                    +Malfunction("../assets/images/malfunctions/creak.png", "Окно скрипит", "от 499 р.")
+                    +Malfunction("../assets/images/malfunctions/noise.png", "Слышен шум с улицы", "от 499 р.")
+                    .malfunction-card.card-form
+                        h3 Не нашли свою неисправность?
+                        p Оставьте заявку и мы свяжемся с вами для уточнения деталей
+                        input(type="tel", placeholder="+7 (___) ___-__-__") 
+                        a.btn отправить
+        section.statistics 
+            .container 
+                h2 За 6 лет сделали ремонт окон в:
+                .numbers 
+                    .number 
+                        h3 2880
+                        p Квартирах
+                    .number 
+                        h3 150
+                        p Домах
+                    .number 
+                        h3 32
+                        p Школах
+                    .number 
+                        h3 48
+                        p Офисах
+        section.reviews 
+            .container 
+                h2 +100 положительных отзывов в Яндексе
+                h3 У нас безупречная репутация
+                .content 
+                    .revs
+                        <div style="width:560px;height:800px;overflow:hidden;position:relative;"><iframe style="width:100%;height:100%;border:1px solid #e6e6e6;border-radius:8px;box-sizing:border-box" src="https://yandex.ru/maps-reviews-widget/119179353078?comments"></iframe><a href="https://yandex.ru/maps/org/rsk_modus/119179353078/" target="_blank" style="box-sizing:border-box;text-decoration:none;color:#b3b3b3;font-size:10px;font-family:YS Text,sans-serif;padding:0 20px;position:absolute;bottom:8px;width:100%;text-align:center;left:0">РСК Модус на карте Москвы — Яндекс.Карты</a></div>
+                    .videos 
+                        .video
+                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/z1_X86D34Q0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        .video
+                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/z1_X86D34Q0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        .video
+                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/z1_X86D34Q0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        section.recommendations
+            .container 
+                .descr 
+                    h2 Нас рекомендуют
+                    p Мы стремится развивать долгосрочные взаимовыгодные отношения — как с заказчиками, так и с поставщиками услуг.
+                    p Для организаций мы предлагаем возможность заказать выполнение работ на обслуживание оконных и дверных конструкций с оплатой по безналичному расчету: единоразово или годовой договор на обслуживание. 
+                .carousel
+                    .owl-carousel.carousel-recommendations
+                        .carousel-item 
+                            img(src="../assets/images/recommendations/recommendations-1.png", alt="")
+                        .carousel-item 
+                            img(src="../assets/images/recommendations/recommendations-1.png", alt="")
+                    .btns
+                        button.btn-prev.btn-carousel-recommendations
+                        ul.owl-dots-custom-recommendations
+                            li.slide1-recommendations.active(data="0-recommendations")
+                            li.slide2-recommendations(data="1-recommendations")
+                        button.btn-next.btn-carousel-recommendations
+        section.economy 
+            .container 
+                h2 Экономим ваши деньги!
+                .cards 
+                    +EconomyCard("../assets/images/economy/without-prepayment.png", "Работаем без предоплаты. Оплата только по факту выполненных работ")
+                    +EconomyCard("../assets/images/economy/free.png", "Выезд и диагностика бесплатно. Наши мастера есть в каждом районе Москвы.")
+                    +EconomyCard("../assets/images/economy/warranty.png", "Вы получите гарантию возврата средств, закрепленную в договоре")
+                    +EconomyCard("../assets/images/economy/installments.png", "Действует беспроцентная рассрочка до 6 месяцев")
+                    +EconomyCard("../assets/images/economy/accessories.png", "Комплектующие без наценки из Германии и Италии")
+                    +EconomyCard("../assets/images/economy/insist.png", "Мы не настаиваем на замене, если можно просто отремонтировать.")
+                a.btn узнать стоимость ремонта
+        section.director 
+            .container 
+                .director-card
+                    p.name Николай Плешаков
+                    p.post Технический директор
+                .descr
+                    h2 Появились вопросы по качеству?
+                    h3 На 99% всё зависит от профессионализма коллектива
+                    p Внедряем умные решения для ремонта, продумывая каждую мелочь наперед. Это позволяет заказчику экономить деньги, время и нервы. За 6 лет работы мы собрали мастеров с “золотыми руками” со всей Москвы, только так можно делать ремонт хорошо.
+                    p По вопросам качества Вы всегда можете обратиться ко мне лично:
+                    .contacts
+                        a(href="tel:+79081234567").btn +7 908 123-45-67 
+                        a.mail(href="mailto:dir@rsk-modus.ru") DIR@RSK-MODUS.RU 
+                    .social 
+                        p ИЛИ В СОЦ. СЕТЯХ:
+                        a.facebook(href="") 
+                        a.instagram(href="") 
+                        a.vk(href="") 
+        section.masters 
+            .container 
+                h2 Ваши окна отремонтирует сертифицированный мастера
+                p Наши мастера прошли сертификацию и регулярно проходят курсы повышения квалификации. Они всегда в курсе новинок из мира оконного производства, поэтому готовы отремонтировать сложные поломки даже в самых нестандартных окнах.
+                .cards 
+                    +MastersCard("../assets/images/masters/Titov.png", "Ярослав Титов", "Руководитель клиентского сервиса")
+                    +MastersCard("../assets/images/masters/Karasev.png", "Денис Карасев", "Ведущий специалист")
+                    +MastersCard("../assets/images/masters/Pleshakov.png", "Николай Плешаков", "Технический директор")
+                    +MastersCard("../assets/images/masters/Derevyanko.png", "Иван Деревянко", "Ведущий специалист")
+                    +MastersCard("../assets/images/masters/Ivanov.png", "Тимур Иванов", "Опыт работы с пластиковыми окнами более 3 лет")
+                    +MastersCard("../assets/images/masters/Devtyan.png", "Вардан Девтян", "Старший прораб")
+                a.btn рассчитать стоимость ремонта со скидкой
+        section.form 
+            .container(style="background-image: url(../assets/images/bg/forma.jpg);")
+                form 
+                    h3 не знаете с чего начать?
+                    h2 начните с <span>бесплатной </span>консультации
+                    input(type="text", placeholder="Ваше имя")
+                    input(type="tel", placeholder="Телефон для связи")
+                    input(type="text", placeholder="Комментарий")
+                    a.btn отправить
+                    p  отправляя данные я соглашаюсь с политикой конфиденциальности 
+        section.contacts 
+            h2 Контакты
+            .map
+                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ac07d144a97948aa31134aad34d4e11594a5b34698db75e77a3285c4d276220c1&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
+                .info
+                    p ООО "РСК МОДУС"
+                    p.location Москва, улица Горбунова, 2с3 БЦ Гранд Сетунь Плаза (B 407, этаж 4)
+                    a(href="tel:84951896889") 8 (495) 189-68-89
+        footer 
+            .container 
+                img(src="../assets/images/logo-big.png", alt="")
+                p ремонт пластиковых окон в Москве
+                a(href="tel:84951896889") 8 (495) 189-68-89
         include pug/scripts.pug
