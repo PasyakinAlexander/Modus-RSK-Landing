@@ -78,6 +78,31 @@ header{
         }
     }
 
+    .btn-mail{
+        padding: 5px 15px;
+        background: none;
+        border: 2px solid #a4826b;
+        color: #0c5371;
+        text-transform: none;
+        font-weight: 700;
+        position: relative;
+        padding-left: 50px;
+        background: rgba(255, 255, 255, 0.6);
+    }
+
+    .btn-mail::before{
+        content: '';
+        width: 20px;
+        height: 15px;
+        background-image: url(../images/icons/mail.png);
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        margin: auto;
+        margin-left: 20px;
+    }
+
     .btns{
         display: flex;
         margin-left: 50px;
@@ -86,35 +111,11 @@ header{
             margin: 0 10px;
         }
 
-        .btn-mail{
-            background: none;
-            border: 2px solid #a4826b;
-            color: #0c5371;
-            text-transform: none;
-            font-weight: 700;
-            position: relative;
-            padding-left: 50px;
-            width: 210px;
-        }
-
-        .btn-mail::before{
-            content: '';
-            width: 20px;
-            height: 15px;
-            background-image: url(../images/icons/mail.png);
-            position: absolute;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            margin: auto;
-            margin-left: 20px;
-        }
-
         .btn-call-back{
             text-transform: none;
             font-size: 15px;
-            width: 210px;
             text-align: center;
+            padding: 5px 15px;
         }
 
         .phone{
@@ -167,6 +168,10 @@ header{
                 padding: 10px;
             }
         }
+
+        .social, .btn-mail{
+            display: none;
+        }
     }
 }
 
@@ -174,6 +179,9 @@ header{
     background: url(../images/bg/header.jpg);
     padding-top: 200px;
     padding-bottom: 50px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 
     .text{
         display: flex;
@@ -185,6 +193,7 @@ header{
         font-size: 56px;
         font-weight: 800;
         margin: 0;
+        line-height: 1;
 
         span{
             color: #e3244c;
@@ -194,12 +203,15 @@ header{
     p{
         font-size: 18px;
         margin: 0;
+        margin-top:10px;
     }
 
     .btn-price{
         font-size: 18px;
         margin-top: 20px;
         width: fit-content;
+        padding: 20px 25px;
+        border-radius: 35px;
     }
 
     .kp{
@@ -208,7 +220,7 @@ header{
         width: 45%;
 
         .kp-block{
-            width: 50%;
+            width: 49%;
             position: relative;
             padding-left: 60px;
             font-size: 16px;
@@ -248,7 +260,7 @@ header{
 }
 
 .malfunctions{
-    margin-top: 50px;
+    margin-top: 80px;
 
     h2{
         font-size: 47px;
@@ -295,6 +307,10 @@ header{
             font-weight: 700;
             margin: 10px 0;
             color: #e3244c;
+        }
+
+        .btn{
+            padding: 10px 40px;
         }
     }
 
@@ -347,7 +363,7 @@ header{
 
     .numbers{
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         width: 100%;
         margin-top: 50px;
 
@@ -392,6 +408,8 @@ header{
             font-size: 24px;
             margin: 0;
             font-weight: 400;
+            color: #3a3330;
+            margin-top: 20px;
         }
 
         .content{
@@ -402,6 +420,7 @@ header{
 
             .revs{
                 width: 50%;
+                padding-right: 20px;
             }
 
             .videos{
@@ -451,21 +470,21 @@ header{
         }
 
         .carousel{
-            width: 50%;
+            width: 35%;
             display: flex;
             flex-direction: column;
             align-items: center;
 
             .carousel-recommendations{
                 .carousel-item{
-                    height:500px;
+                    //height:500px;
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     
                     img{
-                        height: 80%;
-                        width: auto;
+                        height: auto;
+                        width: 100%;
                         border: 5px solid #ac8e74;
                     }
                 }
@@ -473,6 +492,7 @@ header{
 
             .btns{
                 display: flex;
+                margin-top: 50px;
 
                 .btn-carousel-recommendations{
                     background: none;
@@ -539,7 +559,7 @@ header{
     }
 
     .economy-card {
-        width: 32%;
+        width: 360px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -552,7 +572,7 @@ header{
         }
 
         p{
-            font-size: 18px;
+            font-size: 15px;
             font-weight: 600;
             text-align: center;
             margin: 0;
@@ -561,6 +581,9 @@ header{
 
     .btn{
         margin-top: 50px;
+        padding: 20px 40px;
+        border-radius: 35px;
+        font-size: 18px;
     }
 }
 
@@ -575,7 +598,7 @@ header{
         align-items: center;
 
         .director-card{
-            background-image: url(../images/Director.png);
+            background-image: url(../images/director.png);
             margin-top: 65px;
             width: 35%;
             height: 600px;
@@ -638,6 +661,8 @@ header{
 
                 .btn{
                     background: #ac8e74;
+                    padding: 10px 40px;
+                    font-size: 15px;
                 }
             }
 
@@ -744,6 +769,9 @@ header{
 
     .btn{
         margin-top: 50px;
+        font-size: 18px;
+        padding: 15px 30px;
+        border-radius: 30px;
     }
 }
 
@@ -788,12 +816,17 @@ header{
             border: 1px solid #bdbdbd;
             padding: 10px;
             border-radius: 10px;
-            width: 80%;
-            margin-top: 10px;
+            width: 85%;
+            margin-top: 15px;
+            font-family: OpenSans;
+            font-size: 14px;
         }
 
         .btn{
             margin-top: 20px;
+            font-size: 18px;
+            padding: 10px 60px;
+            border-radius: 45px;
         }
 
         p{
@@ -801,7 +834,7 @@ header{
             color: #bdbdbd;
             width: 80%;
             text-align: center;
-            margin-top: 50px;
+            margin-top: 20px;
         }
     }
 }
@@ -828,8 +861,8 @@ header{
         bottom: 0;
         margin: auto;
         left: 300px;
-        width: 450px;
-        height: 250px;
+        width: 410px;
+        height: 240px;
         background: white;
         padding: 30px;
         display: flex;
@@ -837,39 +870,47 @@ header{
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 
         p{
-            font-size: 14px;
+            font-size: 13px;
+            color: #616161;
+            margin: 0;
         }
 
         .location{
-            font-size: 18px;
+            font-size: 16px;
             position: relative;
+            padding: 25px;
             padding-left: 60px;
-            border-bottom: 1px solid #bdbdbda6;
-            padding-bottom: 20px;
+            padding-right: 15px;
+            border-bottom: 1px solid #e5e5e5;
+            color: black;
         }
 
         .location::before{
             content: '';
-            width: 40px;
-            height: 40px;
+            width: 34px;
+            height: 34px;
             background-image: url(../images/icons/map-ic-point.png);
             position: absolute;
-            top: 5px;
+            top: 0px;
             left: 0;
+            bottom: 0;
+            margin: auto;
             background-size: contain;
         }
 
         a{
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 600;
             position: relative;
+            padding: 25px;
             padding-left: 60px;
+            padding-right: 15px;
         }
 
         a::before{
             content: '';
-            width: 40px;
-            height: 40px;
+            width: 33px;
+            height: 33px;
             background-image: url(../images/icons/map-ic-phone.png);
             position: absolute;
             top: 0;
@@ -894,13 +935,16 @@ footer{
     p{
         font-size: 13px;
         text-transform: uppercase;
+        color: #3a3a3a;
     }
 
     a{
-        padding: 10px 30px;
-        background: #f1f1f1;
+        padding: 15px 50px;
+        background: rgba(238,238,238,.8);
         font-weight: 700;
         margin-top: 20px;
+        color: #3a3a3a;
+        font-size: 23px;
     }
 }
 

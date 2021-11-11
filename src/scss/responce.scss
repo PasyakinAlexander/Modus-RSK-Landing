@@ -30,6 +30,28 @@
             }
         }
     }
+
+    header{
+        .btns{
+            margin-left: 0;
+
+            .phone{
+                margin-left: 0;
+            }
+        }
+    }
+
+    .top{
+        .text, .kp{
+            width: 55%;
+        }
+    }
+
+    .economy{
+        .cards{
+            justify-content: space-around;
+        }
+    }
 }
 
 @media(max-width: 1024px)
@@ -37,6 +59,14 @@
     .container
     {
         max-width: 992px;
+    }
+
+    header{
+        .nav{
+            ul{
+                width: 70%;
+            }
+        }
     }
 }
 
@@ -78,6 +108,156 @@
                     bottom: 50px;
                 }
             }
+        }
+    }
+
+    header{
+        .social{
+            display: none;
+        }
+
+        .btn-mail{
+            display: none;
+        }
+
+        .nav{
+            position: absolute;
+            top: 0;
+            width: 300px;
+            height: 400px;
+            left: -300px;
+            transition: 0.5s;
+            background: rgba($color: #e6e6e6, $alpha: 0.95);
+
+            .social, .btn-mail{
+                display: flex;
+            }
+
+            .container{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+                height: 100%;
+            }
+
+            ul{
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btnCloseMenu{
+                display: block;
+                position: absolute;
+                top: 15px;
+                right: 25px;
+                background: none;
+                border: none;
+            }
+    
+            .btnCloseMenu:before, .btnCloseMenu:after {
+                position: absolute;
+                content: ' ';
+                height: 33px;
+                width: 2px;
+                background-color: black;
+                }
+                .btnCloseMenu:before {
+                transform: rotate(45deg);
+                }
+                .btnCloseMenu:after {
+                transform: rotate(-45deg);
+            }
+        }
+
+        .showMenu{
+            left: 0;
+        }
+    }
+
+    .btn__menu{
+        display: block;
+        height: 25px;
+        width: 25px;
+        
+    }
+
+    .btn__menu:before, .btn__menu:after, .btn__menu span
+    {
+        height: 2px;
+        position: absolute;
+        background:  black;
+        left: 0;
+        right: 0;
+        margin: auto; 
+        transform:none;
+    }
+
+    .btn__menu span
+    {
+        width: 100%; 
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;   
+    }
+
+    .btn__menu:before
+    {
+        content: "";
+        width: 100%;
+        top: 3px;
+    }
+
+    .btn__menu:after
+    {
+        content: "";
+        width: 100%;
+        bottom: 2px;
+    }
+
+    .top{
+        padding-top: 150px;
+
+        .text{
+            width: 70%;
+        }
+
+        .kp{
+            width: 70%;
+        }
+    }
+
+    .malfunctions{
+        .malfunction-card{
+            width: 30%;
+        }
+
+        .malfunctions-cards{
+            justify-content: space-evenly;
+        }
+    }
+
+    .masters{
+        .cards{
+            .master-card{
+                width: 45%;
+            }
+        }
+    }
+
+    .form{
+        form{
+            width: 70%;
+        }
+    }
+
+    .contacts{
+        .info{
+            left: 43px;
+            top: 10px;
+            margin: initial;
         }
     }
 }
@@ -127,7 +307,7 @@
                     .carousel-item{
                         img{
                             height: auto;
-                            width: auto;
+                            width: 100%;
                         }
                     }
                 }
@@ -137,6 +317,81 @@
 
     .director{
         padding-bottom: 50px;
+    }
+
+    header{
+        .logo{
+            width: 45px;
+            overflow: hidden;
+        }
+
+        .btns{
+            .phone{
+                margin-left: 30px;
+            }
+        }
+    }
+
+    .top{
+        .text, .kp{
+            width: 100%;
+        }
+    }
+
+    .malfunctions{
+        .malfunction-card{
+            width: 45%;
+        }
+
+        .malfunctions-cards{
+            justify-content: space-between;
+        }
+    }
+
+    .statistics{
+        .numbers{
+            justify-content: space-between;
+        }
+    }
+
+    .reviews{
+        .container{
+            .content{
+                .revs{
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+
+    .masters{
+        .cards{
+            .master-card{
+                width: 100%;
+            }
+        }
+    }
+
+    .form{
+        form{
+            width: 100%;
+        }
+    }
+
+    .contacts{
+        .map{
+            position: initial;
+            height: auto;
+            flex-direction: column-reverse;
+            display: flex;
+
+            .info{
+                position: initial;
+                width: 100%;
+                height: auto;
+                box-shadow: none;
+            }
+        }
     }
 }
 
@@ -234,6 +489,129 @@
                     }
                 }
             }
+        }
+    }
+
+    header{
+        .btns{
+            .phone{
+                font-size: 0;
+                margin: 0;
+            }
+
+            .btn-call-back{
+                font-size: 13px;
+            }
+        }
+    }
+
+    .top{
+        h1{
+            font-size: 32px;
+        }
+
+        .btn-price{
+            font-size: 12px;
+        }
+
+        .kp{
+            .kp-block{
+                width: 100%;
+            }
+        }
+    }
+
+    .malfunctions{
+        h2{
+            font-size: 32px;
+        }
+
+        .malfunction-card{
+            width: 100%;
+        }
+
+        .card-form{
+            .btn{
+                margin-top: 20px;
+            }
+        }
+    }
+
+    .statistics{
+        h2{
+            font-size: 32px;
+            text-align: center;
+        }
+
+        .numbers{
+            flex-direction: column;
+        }
+    }
+
+    .reviews{
+        .container{
+            h2{
+                font-size: 36px;
+            }
+        }
+    }
+
+    .recommendations{
+        .container{
+            .descr{
+                text-align: center;
+            }
+        }
+    }
+
+    .economy{
+        .economy-card{
+            width: 100%;
+        }
+
+        .btn{
+            font-size: 13px;
+        }
+    }
+
+    .masters{
+        padding-top: 100px;
+
+        h2{
+            font-size: 24px;
+            text-align: center;
+        }
+
+        p{
+            width: 100%;
+        }
+
+        .btn{
+            font-size: 17px;
+            text-align: center;
+        }
+    }
+
+    .form{
+        .container{
+            padding: 0;
+        }
+
+        h3{
+            text-align: center;
+        }
+    }
+
+    .contacts{
+        .map{
+            height: 600px;
+            margin-top: 50px;
+        }
+    }
+
+    footer{
+        img{
+            width: 100%;
         }
     }
 }

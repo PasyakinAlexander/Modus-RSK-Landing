@@ -11,8 +11,9 @@ html(lang="ru")
     body
         header 
             .container 
-                a(href="#") 
-                    img.logo(src="../assets/images/logo.png", alt="")
+                +BtnMenu()
+                a(href="#").logo 
+                    img(src="../assets/images/logo.png", alt="")
                 .contacts 
                     .social 
                         a(href="")
@@ -38,6 +39,15 @@ html(lang="ru")
                             a(href="") Наши гарантии
                         li
                             a(href="") Контакты
+                    .social
+                        a(href="")
+                            img(src="../assets/images/icons/social/facebook.png", alt="") 
+                        a(href="")
+                            img(src="../assets/images/icons/social/instagram.png", alt="") 
+                        a(href="")
+                            img(src="../assets/images/icons/social/vkontakte.png", alt="")
+                    a(href="mailto:info@rsk-modus.ru").btn.btn-mail info@rsk-modus.ru
+                    button.btnCloseMenu
         section.top 
             .container
                 .text 
@@ -88,7 +98,7 @@ html(lang="ru")
                 h3 У нас безупречная репутация
                 .content 
                     .revs
-                        <div style="width:560px;height:800px;overflow:hidden;position:relative;"><iframe style="width:100%;height:100%;border:1px solid #e6e6e6;border-radius:8px;box-sizing:border-box" src="https://yandex.ru/maps-reviews-widget/119179353078?comments"></iframe><a href="https://yandex.ru/maps/org/rsk_modus/119179353078/" target="_blank" style="box-sizing:border-box;text-decoration:none;color:#b3b3b3;font-size:10px;font-family:YS Text,sans-serif;padding:0 20px;position:absolute;bottom:8px;width:100%;text-align:center;left:0">РСК Модус на карте Москвы — Яндекс.Карты</a></div>
+                        <div style="width:100%;height:800px;overflow:hidden;position:relative;"><iframe style="width:100%;height:100%;border:1px solid #e6e6e6;border-radius:8px;box-sizing:border-box" src="https://yandex.ru/maps-reviews-widget/119179353078?comments"></iframe><a href="https://yandex.ru/maps/org/rsk_modus/119179353078/" target="_blank" style="box-sizing:border-box;text-decoration:none;color:#b3b3b3;font-size:10px;font-family:YS Text,sans-serif;padding:0 20px;position:absolute;bottom:8px;width:100%;text-align:center;left:0">РСК Модус на карте Москвы — Яндекс.Карты</a></div>
                     .videos 
                         .video
                             <iframe width="100%" height="100%" src="https://www.youtube.com/embed/z1_X86D34Q0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -118,12 +128,12 @@ html(lang="ru")
             .container 
                 h2 Экономим ваши деньги!
                 .cards 
-                    +EconomyCard("../assets/images/economy/without-prepayment.png", "Работаем без предоплаты. Оплата только по факту выполненных работ")
-                    +EconomyCard("../assets/images/economy/free.png", "Выезд и диагностика бесплатно. Наши мастера есть в каждом районе Москвы.")
-                    +EconomyCard("../assets/images/economy/warranty.png", "Вы получите гарантию возврата средств, закрепленную в договоре")
-                    +EconomyCard("../assets/images/economy/installments.png", "Действует беспроцентная рассрочка до 6 месяцев")
-                    +EconomyCard("../assets/images/economy/accessories.png", "Комплектующие без наценки из Германии и Италии")
-                    +EconomyCard("../assets/images/economy/insist.png", "Мы не настаиваем на замене, если можно просто отремонтировать.")
+                    +EconomyCard("../assets/images/economy/without-prepayment.png", "Работаем без предоплаты.<br>Оплата только по факту выполненных работ")
+                    +EconomyCard("../assets/images/economy/free.png", "Выезд и диагностика бесплатно.<br>Наши мастера есть в каждом районе Москвы.")
+                    +EconomyCard("../assets/images/economy/warranty.png", "Вы получите гарантию возврата средств,<br>закрепленную в договоре")
+                    +EconomyCard("../assets/images/economy/installments.png", "Действует беспроцентная рассрочка<br>до 6 месяцев")
+                    +EconomyCard("../assets/images/economy/accessories.png", "Комплектующие без наценки<br>из Германии и Италии")
+                    +EconomyCard("../assets/images/economy/insist.png", "Мы не настаиваем на замене,<br>если можно просто отремонтировать.")
                 a.btn узнать стоимость ремонта
         section.director 
             .container 

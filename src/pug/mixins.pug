@@ -27,7 +27,7 @@ mixin Malfunction(imgPath, title, price)
 mixin EconomyCard(imgPath, text)
     .economy-card 
         img(src= imgPath, alt="")
-        p= text
+        p !{text}
 
 mixin MastersCard(imgPath, name, post)
     .master-card 
