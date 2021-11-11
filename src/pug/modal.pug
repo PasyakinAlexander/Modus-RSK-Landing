@@ -6,5 +6,11 @@ mixin Modal(id, modalTemplate)
                 +#{modalTemplate}(entry)
 
 mixin ModalTemplate
-    h1 ModalTemplate
+    form
+        h3 узнайте стоимость ремонта
+        input(type="text", placeholder="Ваше имя")
+        input(type="tel", placeholder="Телефон для связи")
+        input(type="text", placeholder="Комментарий")
+        a.btn отправить
+        p  отправляя данные я соглашаюсь с политикой конфиденциальности 
     

@@ -22,7 +22,7 @@ mixin Malfunction(imgPath, title, price)
         .image(style=`background-image:url(${imgPath})`)
         h3= title 
         p= price 
-        a.btn обратиться
+        a(modal="Price").btn обратиться
 
 mixin EconomyCard(imgPath, text)
     .economy-card 

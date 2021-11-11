@@ -7,6 +7,7 @@ function Core()
     InitOwlCarousel();
     ShowMenu();
     CloseMenu();
+    SetAncors();
 }
 
 function InitOwlCarousel()
@@ -137,4 +138,16 @@ function HideModal(modalId)
         $(modalId + ' .modal__dialog').removeClass('fadeOutDownBig');
         $('.modal__backdrop').remove();
     });
+}
+
+function SetAncors()
+{
+    $('[ancore]').on('click', function (e) {
+        e.preventDefault();
+        window.scrollTo({
+            top: $($(this).attr('ancore')).position().top - 90,
+            left: 0,
+            behavior: 'smooth'
+        });
+    })
 }

@@ -948,5 +948,59 @@ footer{
     }
 }
 
+.modal{
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h3{
+            font-size: 21px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin: 0;
+            margin-bottom: 20px;
+        }
+
+        h2{
+            font-size: 29px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin: 0;
+            text-align: center;
+            margin-top: 10px;
+
+            span{
+                color: #e3244c;
+            }
+        }
+
+        input{
+            border: 1px solid #bdbdbd;
+            padding: 10px;
+            border-radius: 10px;
+            width: 85%;
+            margin-top: 15px;
+            font-family: OpenSans;
+            font-size: 14px;
+        }
+
+        .btn{
+            margin-top: 20px;
+            font-size: 18px;
+            padding: 10px 60px;
+            border-radius: 45px;
+        }
+
+        p{
+            font-size: 12px;
+            color: #bdbdbd;
+            width: 80%;
+            text-align: center;
+            margin-top: 20px;
+        }
+    }
+}
+
 
 @import 'responce';
