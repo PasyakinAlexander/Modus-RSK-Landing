@@ -639,4 +639,31 @@
             width: 100%;
         }
     }
+
+    .modal{
+        form{
+    
+            h3{
+                text-align: center;
+            }
+    
+            input{
+                border: 1px solid #bdbdbd;
+                padding: 10px;
+                border-radius: 10px;
+                width: 100%;
+                margin-top: 15px;
+                font-family: OpenSans;
+                font-size: 14px;
+            }
+    
+            .btn{
+                padding: 10px 40px;
+            }
+    
+            p{
+                width: 100%;
+            }
+        }
+    }
 }
